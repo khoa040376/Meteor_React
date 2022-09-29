@@ -4,7 +4,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const SignedIn = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <Flex align="center" justify="center">
       <Stack spacing={8} mx="auto" maxW="lg" py={12} px={6}>

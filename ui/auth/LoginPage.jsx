@@ -31,8 +31,8 @@ export default function LoginPage() {
   const navigate = useNavigate();
 
   const validationSchema = object({
-    username: string('Enter staff username').required('Username is required'),
-    password: string('Enter staff password').required('Password is required'),
+    username: string('Enter staff username').required("Please enter username"),
+    password: string('Enter staff password').required('Please enter password'),
   });
 
   const handleError = (error, actions) => {
@@ -78,7 +78,7 @@ export default function LoginPage() {
             Sign in
           </Heading>
           <Text fontSize="lg" color={useColorModeValue('gray.600', 'gray.400')}>
-            To enter the manage page
+            To enter Theplayer Company
           </Text>
         </Stack>
         <Box

@@ -32,6 +32,7 @@ const checkTaskOwner = ({ taskId }) => {
   });
   if (!task) {
     throw new Meteor.Error('Error', 'Access denied.');
+    // return <LoginPage />
   }
 };
 

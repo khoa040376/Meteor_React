@@ -5,14 +5,23 @@ import {
   ButtonGroup,
   IconButton,
   Divider,
+  Image,
   useColorModeValue,
+
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
+  HStack, Square, Circle, PhoneIcon, Center
 } from '@chakra-ui/react';
 import React from 'react';
-import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
-import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
-import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter';
-
+import { BsFacebook } from "react-icons/bs";
 export const Footer = () => (
+  
+  
+  
+ 
   <Box
     as="footer"
     role="contentinfo"
@@ -23,33 +32,45 @@ export const Footer = () => (
       md: '8',
     }}
   >
+  
+    
     <Stack>
+   
+  
+
       <Divider my="5" borderColor={useColorModeValue('gray.400', 'gray.400')} />
+      <a href="https://www.facebook.com/KITS.TPHCM">
+      <Image boxSize='200px' src='
+      https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/307852454_560403599217902_3731584879879163666_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=axg3i35MXkwAX_j-9rj&_nc_ht=scontent.fsgn3-1.fna&oh=00_AT_GAWflgN24CfW6o6A0szEzMEPV_XnS2NBlR5JihkX2SQ&oe=633ABBBC
+' alt='Khoa' /></a>
       <Stack direction="row" spacing="2" align="center" justify="space-between">
+      
         <ButtonGroup variant="ghost" color="gray.600">
+        
+          
           <IconButton
             as="a"
             target="_blank"
-            href="https://github.com/fredmaiaarantes/simpletasks"
-            aria-label="GitHub"
-            icon={<FaGithub fontSize="20px" />}
+            href="https://www.facebook.com/KhoaPY"
+            aria-label="Facebook"
+            icon={<BsFacebook fontSize="30px" />}
+            
           />
-          <IconButton
-            as="a"
-            target="_blank"
-            href="https://twitter.com/fredmaiaarantes"
-            aria-label="Twitter"
-            icon={<FaTwitter fontSize="20px" />}
-          />
-          <IconButton
-            as="a"
-            target="_blank"
-            href="https://linkedin.com/in/fredmaiaarantes"
-            aria-label="LinkedIn"
-            icon={<FaLinkedin fontSize="20px" />}
-          />
-        </ButtonGroup>
+        
+          
+        </ButtonGroup> 
+        
       </Stack>
+
+
+
+      
+  <FormControl isRequired>
+  <FormLabel>First name</FormLabel>
+  <Input placeholder='First name' />
+</FormControl>
+
+
       <Text
         fontSize="xs"
         alignSelf={{
@@ -57,16 +78,15 @@ export const Footer = () => (
           sm: 'start',
         }}
       >
-        &copy; {new Date().getFullYear()} Charm (Chakra-UI, React,{' '}
-        <a href="https://meteor.com" target="_blank">
-          MeteorJS
+        &copy; {new Date().getFullYear()} Theplayer (IT{' '}
+        <a href="http://theplayer.school/" target="_blank">
+          Team
         </a>
-        ) by{' '}
-        <a href="https://twitter.com/fredmaiaarantes" target="_blank">
-          @fredmaiaarantes
-        </a>
-        .
+        )
       </Text>
+      
     </Stack>
+    
   </Box>
+  
 );
