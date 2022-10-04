@@ -8,12 +8,18 @@ import {
   Stack,
   useColorMode,
   useColorModeValue,
+
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useTracker } from 'meteor/react-meteor-data';
 import { useNavigate } from 'react-router-dom';
 import { RoutePaths } from '../Routes';
+import { ChevronRightIcon } from '@chakra-ui/icons';
 
+import { AiOutlineMail } from "react-icons/ai";
 export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const user = useTracker(() => Meteor.user());
@@ -39,6 +45,7 @@ export const Navbar = () => {
         align="center"
       >
         <Flex flex={{ base: 1 }} justify="start">
+          <a href="/">
           <Text
             as="span"
             bgGradient="linear(to-l, #675AAA, #4399E1)"
@@ -47,9 +54,38 @@ export const Navbar = () => {
             fontFamily="heading"
             textAlign="left"
           >
-            The Player IT Team
+            The Player
           </Text>
+          </a>
         </Flex>
+
+
+
+        <Flex  m={1} mr={3} >
+        <Breadcrumb spacing='8px' separator={<ChevronRightIcon color='gray.500' />} textDecoration="none" >
+        <BreadcrumbItem>
+          <BreadcrumbLink href='/'><Button colorScheme='teal' size='md' >
+          Login
+        </Button></BreadcrumbLink>
+        </BreadcrumbItem>
+
+        <BreadcrumbItem>
+          <BreadcrumbLink href='/tasks'><Button colorScheme='teal' variant='solid'>
+          Task
+        </Button></BreadcrumbLink>
+        </BreadcrumbItem>
+
+        <BreadcrumbItem>
+          <BreadcrumbLink href='/contact'>
+          <Button rightIcon={<AiOutlineMail />} colorScheme='teal' variant='solid'>
+            Call us
+          </Button>
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
+        </Flex>
+
+
 
         <Stack
           flex={{ base: 1, md: 0 }}

@@ -7,6 +7,11 @@ export const SignedIn = () => {
   // const navigate = useNavigate();
   return (
     <Flex align="center" justify="center">
+
+
+
+
+      
       <Stack spacing={8} mx="auto" maxW="lg" py={12} px={6}>
         <Stack align="center">
           <Heading
